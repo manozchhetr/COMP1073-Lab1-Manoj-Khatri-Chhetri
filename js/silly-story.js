@@ -11,15 +11,13 @@ let randomize = document.querySelector('.randomize');
 let story = document.querySelector('.story');
 
 
-/* STEP 3: Create the variable that contains the story string that will be modified - use var storyText to containt the following:
-'It was 94 farenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
-*/
+/// STEP 3: Create the variable that contains the story string to be modified
+var storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
 
-/* STEP 4: Create three arrays, insertX, insertY, and insertZ, assigning them the following array values respectively:
-Donald Trump, Jackie Chan, Santa Claus
-Area 51, Death Valley, Aruba
-spontaneously combusted, rapidly sublimated, evaporated instantly
-*/
+// STEP 4: Create three arrays for the placeholders
+var insertX = ['Donald Trump', 'Jackie Chan', 'Santa Claus'];
+var insertY = ['Area 51', 'Death Valley', 'Aruba'];
+var insertZ = ['spontaneously combusted', 'rapidly sublimated', 'evaporated instantly'];
 
 // FUNCTIONS
 
