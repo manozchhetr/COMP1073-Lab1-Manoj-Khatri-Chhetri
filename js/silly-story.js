@@ -1,3 +1,5 @@
+//hello manoj
+//hello world
 // VARIABLE DECLARATIONS
 
 /* STEP 1: Declare and initialize variables
