@@ -1,4 +1,3 @@
-//hello manoj
 //hello world
 // VARIABLE DECLARATIONS
 
@@ -7,6 +6,10 @@
 - randomize for the button
 - story for the paragraph that outputs the final story
 */
+let customName = document.querySelector('manoz');
+let randomize = document.querySelector('.randomize');
+let story = document.querySelector('.story');
+
 
 /* STEP 3: Create the variable that contains the story string that will be modified - use var storyText to containt the following:
 'It was 94 farenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
