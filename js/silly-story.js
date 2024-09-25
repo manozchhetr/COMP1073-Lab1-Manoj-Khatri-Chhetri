@@ -35,12 +35,16 @@ function result() {
     let yItem = randomValueFromArray(insertY);
     let zItem = randomValueFromArray(insertZ);
 
-	/* STEP 9: Replace the three placeholders in the newStory string — :insertx:, :inserty:, and :insertz: — with the strings stored in xItem, yItem, and zItem. Each time, be sure to update the variable newStory (with +=). You might need to do one of the above replacements twice! */
+	// STEP 9: Replace the placeholders in newStory with the random values
+    newStory = newStory.replace(':insertx:', xItem);
+    newStory = newStory.replace(':insertx:', xItem); // Replace :insertx: again for the second occurrence
+    newStory = newStory.replace(':inserty:', yItem);
+    newStory = newStory.replace(':insertz:', zItem);
 
-	/* STEP 10: If the user has typed a name in the customName field, replace the name 'Bob' in the story with whatever they typed */
-	if(customName.value != '') {
-
-	}
+    // STEP 10: Replace 'Bob' with the custom name if provided
+    if (customName.value != '') {
+        newStory = newStory.replace('Bob', customName.value);
+    }
 	/* STEP 11: If the metric radio button has been checked, we need to convert the temperature and mass numbers in the story */
   if(document.getElementById("metric").checked) {
 		// STEP 11a: Create a variable called weight and convert the 300lbs to kgs (1lb = 0.453592kg)
