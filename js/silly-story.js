@@ -45,26 +45,23 @@ function result() {
     if (customName.value != '') {
         newStory = newStory.replace('Bob', customName.value);
     }
-	/* STEP 11: If the metric radio button has been checked, we need to convert the temperature and mass numbers in the story */
-  if(document.getElementById("metric").checked) {
-		// STEP 11a: Create a variable called weight and convert the 300lbs to kgs (1lb = 0.453592kg)
-		// STEP 11b: Replace the string 300 pounds with the updated weight in kg
+	// STEP 11: If the metric radio button is checked, convert the weight and temperature
+    if (document.getElementById("metric").checked) {
+        // Convert 300lbs to kg
+        var weight = Math.round(300 * 0.453592);
+        newStory = newStory.replace('300 pounds', weight + ' kilograms');
 
-		// STEP 12a: Create a variable called temp and convert °F to °C ... the formula for conversion is °C = (°F - 32) x 5/9
+        // Convert 94°F to °C
+        var temp = Math.round((94 - 32) * (5 / 9));
+        newStory = newStory.replace('94 fahrenheit', temp + ' centigrade');
+    }
 
-		// STEP 12b: Replace the string '94 fahrenheit' with the updated temperature in °C
-
-  }
-	/* STEP 13: Make the textContent property of the story variable (which references the paragraph) equal to newStory */
-
-	// The following line makes the paragraph visible
-	story.style.visibility = 'visible';
+    // STEP 13: Output the modified story to the story paragraph and make it visible
+    story.textContent = newStory;
+    story.style.visibility = 'visible';
 }
 
 // EVENT LISTENERS
-/* STEP 5: Add a click event listener to the randomize variable so that when the button it represents is clicked, the result() function is run. */
 
-
-// This lab based on the excellent assessment challenge at https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator
-
-
+// STEP 5: Add a click event listener to the randomize button to trigger the result() function
+randomize.addEventListener('click', result);
